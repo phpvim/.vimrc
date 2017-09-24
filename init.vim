@@ -18,10 +18,11 @@ let g:airline_powerline_fonts = 1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 if (has("termguicolors"))
-	set termguicolors
+    set termguicolors
 endif
 syntax enable
 colorscheme OceanicNext
+filetype plugin indent on
 
 noremap <C-p> :FZF<CR>
 noremap <C-w> :bdelete<CR><CR>
@@ -33,3 +34,7 @@ imap <C-v> <CR><CR><ESC>k:r !pbpaste<CR>kkJJJi
 set nu
 set completeopt-=preview
 set mouse=v
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
