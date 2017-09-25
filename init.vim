@@ -34,7 +34,7 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-noremap <C-p> :FZFMru<CR>
+noremap <C-p> :FZF<CR>
 noremap <C-w> :bdelete<CR><CR>
 noremap <C-q> :qall<CR>
 noremap h :bprev<CR>
@@ -54,4 +54,5 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+"FZF binary path.
 set rtp+=/usr/local/opt/fzf
