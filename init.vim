@@ -3,7 +3,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lvht/fzf-mru'
-Plug 'xiaohuilam/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -55,4 +55,6 @@ set shiftwidth=4
 set expandtab
 
 "FZF binary path.
-set rtp+=/usr/local/opt/fzf
+
+
+set rtp+=/usr/local/bin/fzf
