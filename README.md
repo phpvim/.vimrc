@@ -9,7 +9,7 @@
 
 ### One-script mode
 ```bash
-curl -s https://git.io/ide | sh
+curl -L -s https://git.io/ide | sh
 ```
 
 
