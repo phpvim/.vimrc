@@ -9,7 +9,7 @@
 
 ### One-script mode
 ```bash
-curl -s https://raw.githubusercontent.com/PHPvim/.vimrc/master/install.sh | sh
+curl -s https://git.io/ide | sh
 ```
 
 
