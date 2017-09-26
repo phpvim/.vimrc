@@ -6,6 +6,6 @@ if [ ! -f ~/.config/nvim/.git/config ] || [ "https://github.com/PHPvim/.vimrc.gi
     [ ! -d ~/.config/nvim ] && mkdir -p ~/.config/nvim
     git clone https://github.com/PHPvim/.vimrc.git ~/.config/nvim/
 fi
-$(cat ~/.config/nvim/init.vim | grep rtp) && sed -i -e 's/set rtp\+\=.*//g' init.vim
-echo "\nset rtp+=$(which fzf)" >> init.vim
+$(cat ~/.config/nvim/init.vim | grep rtp) && sed -i -e 's/set rtp\+\=.*//g' ~/.config/nvim/init.vim
+echo "\nset rtp+=$(which fzf)" >> ~/.config/nvim/init.vim
 nvim -c 'PlugInstall'
