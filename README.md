@@ -5,7 +5,7 @@
 
 ## Feature
 - auto completion for PHP (Trigger: auto display or double <tab>) by phpcd.vim.
-- goto definition for PHP (Trigger: *`kk* to go, *`jj* to back) by phpcd.vim.
+- goto definition for PHP (Trigger: &#96;kk to go, &#96;jj to back) by phpcd.vim.
 - code folding for PHP (Trigger: auto fold, and zm to expand) by phpfold.vim
 - morden ui theme by oceanic-next
 
