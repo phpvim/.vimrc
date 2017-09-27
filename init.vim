@@ -55,6 +55,7 @@ set mouse=v
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set nowrap
 
 "FZF binary path.
 set rtp+=/usr/local/bin/fzf
