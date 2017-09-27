@@ -27,6 +27,7 @@ curl -L -s https://git.io/ide | sh
 ## Trouble shooting
 - Completion and definition mis-detecting: try to check if composer.json autoload/psr-4 is the mis-detected namespace defined?
 - Display wrong channel 2: try `cd ~/.vim/plugged/phpcd.vim && composer update -vvv`
+- Currently, GIT.io/VIM support and only support neovim.
 
 ## License
 Copyleft
