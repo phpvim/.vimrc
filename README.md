@@ -1,4 +1,6 @@
-# .vimrc
+# GIT.io/VIM 
+
+homepage [visit](https://GIT.io/VIM)
 
 ## Demo
 ![clipboard.png](https://sfault-image.b0.upaiyun.com/224/563/2245633107-59c80a2076074)
