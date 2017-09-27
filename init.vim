@@ -4,6 +4,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'lvht/fzf-mru'
 Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'lvht/phpfold.vim', { 'for': 'php', 'do': 'composer install' }
 Plug 'mhartington/oceanic-next'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -23,6 +24,7 @@ let g:airline_theme='oceanicnext'
 let g:airline_powerline_fonts = 1
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let g:fzf_mru_ignore_patterns = 'fugitive\|\.git/|vendor/|\_^/tmp/' " default value
+let g:phpfold_include_surround_blank_lines = 'downward'
 
 if (has("termguicolors"))
     set termguicolors
@@ -55,6 +57,8 @@ set shiftwidth=4
 set expandtab
 
 "FZF binary path.
+
+
 
 
 set rtp+=/usr/local/bin/fzf
