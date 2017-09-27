@@ -57,8 +57,4 @@ set shiftwidth=4
 set expandtab
 
 "FZF binary path.
-
-
-
-
 set rtp+=/usr/local/bin/fzf
