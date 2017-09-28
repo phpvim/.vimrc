@@ -46,8 +46,19 @@ noremap <C-v> :r !pbpaste<CR><CR>
 imap <C-v> <CR><CR><ESC>k:r !pbpaste<CR>kkJJJi
 nnoremap <silent><nowait> <leader>kk :call phpcd#JumpToDefinition('normal')<CR>
 nnoremap <silent><nowait> <leader>jj :call phpcd#JumpBack()<CR>
-inoremap <silent><nowait> <tab><tab> <C-x><C-o>
 nnoremap <silent><nowait> s<left> :bprev<CR> nnoremap <silent><nowait> s<right> :bnext<CR> 
+inoremap <expr><silent><nowait> <tab> TabOrCompletion()
+function! TabOrCompletion()
+    if strpart(strpart( getline('.'), 0, col('.')-1 ), strlen(strpart( getline('.'), 0, col('.')-1 ))-2, 2) == '->'
+        return "\<c-x>\<c-o>"
+    elseif strpart(strpart( getline('.'), 0, col('.')-1 ), strlen(strpart( getline('.'), 0, col('.')-1 ))-2, 2) == '::'
+        return "\<c-x>\<c-o>"
+    elseif strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+        return "    "
+    else
+        return "\<c-x>\<c-p>"
+    endif
+endfunction
 
 set nu
 set completeopt-=preview
