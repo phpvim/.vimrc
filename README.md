@@ -12,14 +12,6 @@ homepage [visit](https://GIT.io/VIM)
 - morden ui theme by oceanic-next
 
 ## Install
-phpvim provides you two way installing:
-
-### Step by step
-- First step: vim-plug, see https://github.com/junegunn/vim-plug#installation
-- Second: start up vim/nvim. run `:PlugInstall`
-- Third: reboot your vim/nvim
-
-### One-script mode
 ```bash
 curl -L -s https://git.io/ide | sh
 ```
