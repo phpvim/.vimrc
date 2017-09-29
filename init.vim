@@ -36,18 +36,24 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" copy and paste
+vnoremap <C-c> "+yi
+vnoremap <C-x> "+c
+vnoremap <C-v> c<ESC>"+p
+inoremap <C-v> <ESC>"+pa
+" ctrl p
 noremap <C-p> :FZF<CR>
+" quit
 noremap <C-w> :bdelete<CR><CR>
 noremap <C-q> :qall<CR>
-noremap h :bprev<CR>
-noremap l :bnext<CR>
-vnoremap <C-c> :w !pbcopy<CR><CR>
-noremap <C-v> :r !pbpaste<CR><CR>
-imap <C-v> <CR><CR><ESC>k:r !pbpaste<CR>kkJJJi
+" tab previous and tab next
+noremap <leader><left> :bprev<CR>
+noremap <leader><right> :bnext<CR>
+" completion and definition for php
 nnoremap <silent><nowait> <leader>kk :call phpcd#JumpToDefinition('normal')<CR>
 nnoremap <silent><nowait> <leader>jj :call phpcd#JumpBack()<CR>
-nnoremap <silent><nowait> s<left> :bprev<CR> nnoremap <silent><nowait> s<right> :bnext<CR> 
 inoremap <expr><silent><nowait> <tab> TabOrCompletion()
+
 function! TabOrCompletion()
     if strpart(strpart( getline('.'), 0, col('.')-1 ), strlen(strpart( getline('.'), 0, col('.')-1 ))-2, 2) == '->'
         return "\<c-x>\<c-o>"
